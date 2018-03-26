@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../document-generate-aggregator/document-generate-api" />
+    <file type="web" url="file://$PROJECT_DIR$/ghealth-agency" />
+    <file type="web" url="file://$PROJECT_DIR$/ghealth-api" />
+    <file type="web" url="file://$PROJECT_DIR$/ghealth-mgmt" />
+    <file type="web" url="file://$PROJECT_DIR$/ghealth-open-api" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../document-generate-aggregator/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$/../document-generate-aggregator">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://192.168.12.15/svn/code/todaysoft-store/document-generate/branches" />
+                  <option value="https://192.168.12.15/svn/code/todaysoft-store/document-generate/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://192.168.12.15/svn/code/todaysoft-store/document-generate/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://192.168.12.15/svn/code/ghealth/branches" />
+                  <option value="https://192.168.12.15/svn/code/ghealth/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://192.168.12.15/svn/code/ghealth/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>

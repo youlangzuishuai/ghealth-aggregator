@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="document-generate-api" />
+        <module name="document-generate-sdk" />
+        <module name="ghealth-agency" />
+        <module name="ghealth-api" />
+        <module name="ghealth-api-definition" />
+        <module name="ghealth-data-migrate" />
+        <module name="ghealth-mgmt" />
+        <module name="ghealth-open-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="document-generate-aggregator" target="1.5" />
+      <module name="document-generate-api" target="1.8" />
+      <module name="document-generate-sdk" target="1.8" />
+      <module name="ghealth-agency" target="1.8" />
+      <module name="ghealth-aggregator" target="1.5" />
+      <module name="ghealth-api" target="1.8" />
+      <module name="ghealth-api-definition" target="1.8" />
+      <module name="ghealth-data-migrate" target="1.8" />
+      <module name="ghealth-mgmt" target="1.8" />
+      <module name="ghealth-open-api" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

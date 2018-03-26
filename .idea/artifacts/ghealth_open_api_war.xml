@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ghealth-open-api:war">
+    <output-path>$PROJECT_DIR$/ghealth-open-api/target</output-path>
+    <root id="archive" name="ghealth-open-api-1.0.0.war">
+      <element id="artifact" artifact-name="ghealth-open-api:war exploded" />
+    </root>
+  </artifact>
+</component>

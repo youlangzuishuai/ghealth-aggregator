@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../document-generate-aggregator/document-generate-aggregator.iml" filepath="$PROJECT_DIR$/../document-generate-aggregator/document-generate-aggregator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../document-generate-aggregator/document-generate-api/document-generate-api.iml" filepath="$PROJECT_DIR$/../document-generate-aggregator/document-generate-api/document-generate-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../document-generate-aggregator/document-generate-sdk/document-generate-sdk.iml" filepath="$PROJECT_DIR$/../document-generate-aggregator/document-generate-sdk/document-generate-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-agency/ghealth-agency.iml" filepath="$PROJECT_DIR$/ghealth-agency/ghealth-agency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-aggregator.iml" filepath="$PROJECT_DIR$/ghealth-aggregator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-api/ghealth-api.iml" filepath="$PROJECT_DIR$/ghealth-api/ghealth-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-api-definition/ghealth-api-definition.iml" filepath="$PROJECT_DIR$/ghealth-api-definition/ghealth-api-definition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-data-migrate/ghealth-data-migrate.iml" filepath="$PROJECT_DIR$/ghealth-data-migrate/ghealth-data-migrate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-mgmt/ghealth-mgmt.iml" filepath="$PROJECT_DIR$/ghealth-mgmt/ghealth-mgmt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ghealth-open-api/ghealth-open-api.iml" filepath="$PROJECT_DIR$/ghealth-open-api/ghealth-open-api.iml" />
+    </modules>
+  </component>
+</project>

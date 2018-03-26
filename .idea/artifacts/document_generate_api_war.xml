@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="document-generate-api:war">
+    <output-path>$PROJECT_DIR$/../document-generate-aggregator/document-generate-api/target</output-path>
+    <root id="archive" name="document-generate-api.war">
+      <element id="artifact" artifact-name="document-generate-api:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>扫码收样</title>
+    <link href="${plugins}/bootstrap/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="${plugins}/hplus/font-awesome.min.css" rel="stylesheet"></link>
+    <link href="${plugins}/hplus/animate.min.css" rel="stylesheet"></link>
+    <link href="${plugins}/hplus/hplus.min.css" rel="stylesheet"></link>
+    <link href="${system_css}/system.css?v=0.1" rel="stylesheet"></link>
+    <link href="${plugins}/icheckbox/icheckbox.css" rel="stylesheet"></link>
+    <link href="${plugins}/magicsuggest/magicsuggest-min.css" rel="stylesheet"></link>
+</head>
+<body class="gray-bg">
+        <input type="text" class="form-control" name="orderCode" value="" id="saomiao"
+               style="width: 280px;position: relative;z-index: 9999" placeholder="请扫描或输入样本条码,按回车确认">
+        <table class="table table-striped table-bordered table-hover" id="Table1">
+            <thead>
+            <tr>
+                <th>订单编号</th>
+                <th>产品名称</th>
+                <th>客户姓名</th>
+                <th>代理商</th>
+                <th>下单时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="daaa">
+            </tbody>
+        </table>
+        <input type="hidden" id="orderIds" name="orderIds">
+<script src="${plugins}/jquery/jquery.min.js"></script>
+<script src="${plugins}/bootstrap/bootstrap.min.js"></script>
+<script src="${plugins}/pagination/jquery.pagination.js"></script>
+<script src="${system_js}/system.js"></script>
+<script src="${plugins}/My97DatePicker/WdatePicker.js"></script>
+<script src="${plugins}/layer/layer.min.js"></script>
+<script src="${plugins}/icheckbox/icheckbox.min.js"></script>
+<script src="${plugins}/magicsuggest/magicsuggest-min.js"></script>
+<script src="${system_js}/selectChecked.js"></script>
+        <script>
+            $("#saomiao").keydown(function(e) {
+                if (e.keyCode == 13) {
+
+                    if ($("#saomiao").val() == '' || $("#saomiao").val() == undefined) {
+                        showTip("请输入样本编号", "错误提示");
+                        return false;
+                    }
+                    var aa ="";
+                    $('#Table1 tr').find('td').each(function() {
+                        if ($(this).index() == "0") { // 假设要获取第一列的值
+                            aa=$(this).text() + '-'
+                        }
+                    });
+
+                    var arr = aa.split("-");
+                    for(i in arr){
+                        if($("#saomiao").val()==arr[i]){
+                            showTip("该订单已扫描", "错误提示");
+                            return false;
+                            $('#saomiao').val('');
+                        }
+                    }
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: "${base}/sample/getInformation.do",
+                        data: {
+                            orderCode: $("#saomiao").val(),
+                        },
+                        dataType : "json",
+                        success : function(data) {
+
+                            if ( undefined == data.createTime){
+                                showTip("扫码异常，请去订单列表检查状态", "错误提示");
+                                $('input').val('');
+                            }else {
+                                var date = new Date(data.submitTime).Format("yyyy-MM-dd HH:mm:ss");;
+                                var html = "<tr>"+"<td class='aa'>"+data.code+"</td>"+"<td>"+data.product.name+"</td>"+"<td>"+data.customer.name+"</td>"+
+                                    "<td>"+data.agency.name+"</td>"+"<td>"+date+"</td>"+"<td>"+"<button>"+"删除"+"</button>"+"</td>"+"</tr>";
+                                $('#daaa').append(html);
+
+                                var sss="";
+                                sss=aa+'-'+data.code;
+                                $("#orderIds").val(sss);
+                                $('#saomiao').val('');
+                            }
+                        },
+                        error:function()
+                        {
+                            alert("some error");
+                        }
+
+                    })
+
+                }
+            })
+        </script>
+
+</body>
+</html>
